@@ -5,12 +5,11 @@ info:
 
 http:
   method: PUT
-  url: "{{host}}/api/books/1"
+  url: "{{host}}/api/books/a10224b2-eb7f-4804-886b-e5d784e50382"
   body:
     type: json
     data: |-
       {
-        "id": 1,
         "title": "changed"
       }
   auth: inherit

@@ -3,6 +3,7 @@ name = "bookstore-backend"
 version = "0.0.0"
 dependencies = [
     "fastapi[standard]>=0.141.1",
+    "sqlalchemy>=2.0.51",
 ]
 
 [tool.uv]
