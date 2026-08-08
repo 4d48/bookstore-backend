@@ -2,6 +2,7 @@
 name = "bookstore-backend"
 version = "0.0.0"
 dependencies = [
+    "alembic>=1.19.0",
     "fastapi[standard]>=0.141.1",
     "sqlalchemy>=2.0.51",
 ]
@@ -17,3 +18,10 @@ extraPaths = ["app"]
 
 [tool.fastapi]
 entrypoint = "app.main:app"
+
+[tool.alembic]
+script_location = "%(here)s/alembic"
+file_template = "%%(year)d_%%(month).2d_%%(day).2d_%%(hour).2d%%(minute).2d-%%(rev)s_%%(slug)s"
+prepend_sys_path = [
+    "."
+]

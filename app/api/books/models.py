@@ -1,12 +1,9 @@
 from decimal import Decimal
 
 from sqlalchemy import Column, ForeignKey, Integer, Numeric, String, Table
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-
-class Base(DeclarativeBase):
-    pass
-
+from app.db import Base
 
 books_to_authors = Table(
     "books_to_authors",
