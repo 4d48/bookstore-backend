@@ -18,7 +18,7 @@ class BookCreate(BookBase):
 
 # Response
 class BookResponse(BookBase):
-    id: UUID
+    id: int
 
 
 # Request

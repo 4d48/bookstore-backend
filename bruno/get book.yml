@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/api/books/a10224b2-eb7f-4804-886b-e5d784e50382"
+  url: "{{host}}/api/books/1"
   auth: inherit
 
 settings:

@@ -3,7 +3,7 @@ from decimal import Decimal
 from sqlalchemy import Column, ForeignKey, Integer, Numeric, String, Table
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.db import Base
+from app.database import Base
 
 books_to_authors = Table(
     "books_to_authors",
