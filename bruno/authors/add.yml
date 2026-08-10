@@ -1,16 +1,17 @@
 info:
-  name: add book
+  name: add
   type: http
   seq: 2
 
 http:
   method: POST
-  url: "{{host}}/api/books"
+  url: "{{host}}/api/authors"
   body:
     type: json
     data: |-
       {
-        "title": "test"
+        "name": "George Orwell",
+        "books": [2]
       }
   auth: inherit
 

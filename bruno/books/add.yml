@@ -1,16 +1,16 @@
 info:
-  name: update book
+  name: add
   type: http
-  seq: 5
+  seq: 1
 
 http:
-  method: PUT
-  url: "{{host}}/api/books/2"
+  method: POST
+  url: "{{host}}/api/books"
   body:
     type: json
     data: |-
       {
-        "title": "changed"
+        "title": "test"
       }
   auth: inherit
 

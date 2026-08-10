@@ -1,0 +1,21 @@
+info:
+  name: update
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{host}}/api/books/2"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

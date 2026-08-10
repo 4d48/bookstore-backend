@@ -1,11 +1,11 @@
 info:
-  name: delete book
+  name: get all
   type: http
-  seq: 4
+  seq: 1
 
 http:
-  method: DELETE
-  url: "{{host}}/api/books/1"
+  method: GET
+  url: "{{host}}/api/books"
   auth: inherit
 
 settings:
