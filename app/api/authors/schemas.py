@@ -11,6 +11,11 @@ class AuthorResponse(AuthorBase):
     id: int
 
 
+class AuthorCreateResponse(AuthorBase):
+    id: int
+    book_ids: list[int]
+
+
 class AuthorBooksResponse(BaseModel):
     books: list[BookResponse]
 

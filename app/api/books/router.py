@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
-from sqlalchemy import select
+from sqlalchemy import delete, select
 
 from app.api.books.schemas import BookCreate, BookResponse, BookUpdate
 from app.database import SessionDep
@@ -55,16 +55,12 @@ async def update_book(db: SessionDep, book_id: int, book_in: BookUpdate):
     return stored_book
 
 
-@router.delete("/{book_id}", response_model=BookResponse)
+@router.delete("/{book_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_book(db: SessionDep, book_id: int):
     async with db.begin():
-        book = await db.get(Book, book_id)
+        stmt = delete(Book).where(Book.id == book_id)
 
-        if book is None:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND, detail="Book not found"
-            )
+        result = await db.execute(stmt)
 
-        await db.delete(book)
-
-    return book
+        if result.rowcount == 0:  # pyright: ignore[reportAttributeAccessIssue, reportUnknownMemberType]
+            raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Book not found")
