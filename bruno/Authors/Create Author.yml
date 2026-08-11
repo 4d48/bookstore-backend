@@ -1,7 +1,7 @@
 info:
   name: Create Author
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: POST
@@ -11,7 +11,7 @@ http:
     data: |-
       {
         "name": "George Orwell",
-        "books": [2]
+        "book_ids": [2,4,3,1]
       }
   auth: inherit
 
