@@ -1,17 +1,16 @@
 info:
-  name: add
+  name: Update Book
   type: http
   seq: 2
 
 http:
-  method: POST
-  url: "{{host}}/api/authors"
+  method: PUT
+  url: "{{baseUrl}}/books/2"
   body:
     type: json
     data: |-
       {
-        "name": "George Orwell",
-        "books": [2]
+        "title": "123"
       }
   auth: inherit
 

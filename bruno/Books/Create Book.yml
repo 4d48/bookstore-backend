@@ -1,11 +1,11 @@
 info:
-  name: add
+  name: Create Book
   type: http
   seq: 1
 
 http:
   method: POST
-  url: "{{host}}/api/books"
+  url: "{{baseUrl}}/books"
   body:
     type: json
     data: |-

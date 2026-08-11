@@ -13,11 +13,6 @@ config:
         username: ""
         password: ""
       bypassProxy: ""
-
-request:
-  variables:
-    - name: host
-      value: http://127.0.0.1:8000
 bundled: false
 extensions:
   bruno:

@@ -1,11 +1,11 @@
 info:
-  name: get all
+  name: List Authors
   type: http
   seq: 1
 
 http:
   method: GET
-  url: "{{host}}/api/books"
+  url: "{{baseUrl}}/authors"
   auth: inherit
 
 settings:
