@@ -11,7 +11,7 @@ http:
     data: |-
       {
         "name": "George Orwell",
-        "book_ids": [2,4,3,1]
+        "book_ids": [1]
       }
   auth: inherit
 
