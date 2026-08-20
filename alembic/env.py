@@ -13,8 +13,8 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-from app.api.models import Base
 from app.config import settings
+from app.models import Base
 
 # add your model's MetaData object here
 # for 'autogenerate' support
